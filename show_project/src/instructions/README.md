@@ -1,3 +1,40 @@
+## B站方案托管视频
+
+[如何在博客中添加和优化B站视频外链 - OneMuggle](https://www.521101.xyz/index.php/archives/318.html)
+
+**清晰度比较受限。**
+
+```html
+# 点击可以跳转B站
+<iframe 
+src="//player.bilibili.com/player.html?bvid=BV1ijn9eWE2k" 
+scrolling="no" 
+border="0" 
+frameborder="no" 
+framespacing="0" 
+width="100%" 
+height="500" 
+allowfullscreen="true"
+>
+</iframe>
+```
+
+```html
+# 点击不能跳转
+<iframe 
+src="//player.bilibili.com/player.html?bvid=BV1ijn9eWE2k" 
+scrolling="no" 
+border="0" 
+frameborder="no" 
+framespacing="0" 
+width="100%" 
+height="500" 
+allowfullscreen="true" 
+sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"
+>
+</iframe>
+```
+
 
 
 ## Release方案托管视频
@@ -29,6 +66,8 @@
 ### **上传视频**
 
 直接对现有的release进行编辑即可。
+
+一个release可以对应一个项目。
 
 ```bash
 # 标签[必选] 需要展示的项目名字，或者随便选一个，不影响使用。
