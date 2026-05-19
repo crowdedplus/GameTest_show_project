@@ -198,7 +198,7 @@ function App() {
         <section className="card highlight-card">
           <h2 className="section-title">🔬 视频嵌入方案对比</h2>
           <p className="body-text">
-            拖动中间滑块，直观对比<strong>哔哩哔哩外链播放器</strong>与<strong>GitHub Releases 托管方案</strong>的播放效果差异。
+            直观对比<strong>哔哩哔哩外链播放器</strong>与<strong>GitHub Releases 托管方案</strong>的播放效果差异。
           </p>
           <VideoCompare/>
         </section>
