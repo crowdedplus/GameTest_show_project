@@ -1,0 +1,118 @@
+export const teamMembers = [
+  {
+    id: '636fb16188f51200013f59bc',
+    name: '张天',
+    nameEn: 'Zhang Tian',
+    role: '项目成员',
+    description: '南京大学软件工程研究组 (NJU SEG)',
+    skills: ['软件工程', '自动化测试'],
+    color: '#7B33CC',
+    profileUrl: 'https://seg-models.group/#/pages/team_profile/introduction?id=636fb16188f51200013f59bc',
+  },
+  {
+    id: '687f554fa09a9b16db28e583',
+    name: '季瑞骅',
+    nameEn: 'Ji Ruihua',
+    role: '项目成员',
+    description: '南京大学软件工程研究组 (NJU SEG)',
+    skills: ['软件工程', '自动化测试'],
+    color: '#994DCC',
+    profileUrl: 'https://seg-models.group/#/pages/team_profile/introduction?id=687f554fa09a9b16db28e583',
+  },
+  {
+    id: '687f5566f2949c1a83a21c49',
+    name: '李重',
+    nameEn: 'Li Zhong',
+    role: '项目成员',
+    description: '南京大学软件工程研究组 (NJU SEG)',
+    skills: ['软件工程', '自动化测试'],
+    color: '#B366E6',
+    profileUrl: 'https://seg-models.group/#/pages/team_profile/introduction?id=687f5566f2949c1a83a21c49',
+  },
+  {
+    id: '686f6315b9fb230b03cc0817',
+    name: '林海波',
+    nameEn: 'Lin Haibo',
+    role: '项目成员',
+    description: '南京大学软件工程研究组 (NJU SEG)',
+    skills: ['软件工程', '自动化测试'],
+    color: '#CC80FF',
+    profileUrl: 'https://seg-models.group/#/pages/team_profile/introduction?id=686f6315b9fb230b03cc0817',
+  },
+  {
+    id: '686f5f87286f7cb2b82f9376',
+    name: '铁诗杨',
+    nameEn: 'Tie Shiyang',
+    role: '项目成员',
+    description: '南京大学软件工程研究组 (NJU SEG)',
+    skills: ['软件工程', '自动化测试'],
+    color: '#7B33CC',
+    profileUrl: 'https://seg-models.group/#/pages/team_profile/introduction?id=686f5f87286f7cb2b82f9376',
+  },
+  {
+    id: '686f5f26fe975fd64cc6b09c',
+    name: '杨青云',
+    nameEn: 'Yang Qingyun',
+    role: '项目成员',
+    description: '南京大学软件工程研究组 (NJU SEG)',
+    skills: ['软件工程', '自动化测试'],
+    color: '#994DCC',
+    profileUrl: 'https://seg-models.group/#/pages/team_profile/introduction?id=686f5f26fe975fd64cc6b09c',
+  },
+];
+
+export const projectData = {
+  name: '非侵入式自动化移动游戏测试框架',
+  nameEn: 'Non-Intrusive Automated Mobile Game Testing Framework',
+  description: '联合华为鸿蒙团队，提出完全不依赖游戏内部API、无需人工录制的创新测试框架。通过模拟玩家操作行为，结合视觉感知与智能决策模块，实现对游戏的自动识别、判断与实时交互操作。',
+  organization: '南京大学软件工程研究组 (NJU SEG)',
+  partner: '华为鸿蒙团队',
+  features: [
+    {
+      icon: 'control',
+      title: '控制框架',
+      detail: 'ControlCore + ControlProxy 双层架构，支持 scrcpy 多指触控，按钮/摇杆/滑动三种控件抽象',
+      image: 'https://keming-bbs.oss-cn-shanghai.aliyuncs.com/research_group/file_1750519450018.png',
+    },
+    {
+      icon: 'layout',
+      title: 'UI布局配置',
+      detail: '界面标注工具可视化标注按钮、虚拟摇杆、自由滑动区域，支持多图片联合标注，导出JSON配置',
+      image: 'https://keming-bbs.oss-cn-shanghai.aliyuncs.com/research_group/file_1750519826104.png',
+    },
+    {
+      icon: 'capture',
+      title: '画面采集',
+      detail: '双方案采集：scrcpy 软件采集（高清晰度）+ 硬件摄像头采集（低侵入、广适配）',
+      image: 'https://keming-bbs.oss-cn-shanghai.aliyuncs.com/research_group/file_1751899765132.jpg',
+    },
+    {
+      icon: 'calibrate',
+      title: '画面校准',
+      detail: '边缘检测+透视变换自动校准画面，支持设备自动解锁，排除画面内容干扰',
+      image: 'https://keming-bbs.oss-cn-shanghai.aliyuncs.com/research_group/file_1753757350589.png',
+    },
+  ],
+  demos: [
+    {
+      title: '硬件平台介绍',
+      video: 'https://keming-bbs.oss-cn-shanghai.aliyuncs.com/research_group/file_1750521368806.mp4',
+    },
+    {
+      title: '移动游戏测试过程',
+      video: 'https://keming-bbs.oss-cn-shanghai.aliyuncs.com/research_group/file_1750521400404.mp4',
+    },
+    {
+      title: '原神自动战斗演示',
+      video: 'https://keming-bbs.oss-cn-shanghai.aliyuncs.com/research_group/file_1750522420488.mp4',
+    },
+    {
+      title: '原神自动寻路演示',
+      video: 'https://keming-bbs.oss-cn-shanghai.aliyuncs.com/research_group/file_1750522774263.mp4',
+    },
+  ],
+  links: {
+    landingPage: 'https://young-cloud-creator.github.io/game_test_landing_page/',
+    segGroup: 'https://seg-models.group/#/',
+  },
+};
