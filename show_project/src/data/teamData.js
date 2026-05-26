@@ -110,6 +110,10 @@ export const projectData = {
       title: '原神自动寻路演示',
       video: 'https://keming-bbs.oss-cn-shanghai.aliyuncs.com/research_group/file_1750522774263.mp4',
     },
+    {
+      title: '和平精英识别寻路演示',
+      video: 'https://github.com/crowdedplus/GameTest_show_project/releases/download/video_optimized/Peacekeeper_Elite-optimized-2026-5-22.mp4',
+    },
   ],
   links: {
     landingPage: 'https://young-cloud-creator.github.io/game_test_landing_page/',
