@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { teamMembers } from '../data/teamData';
 
 function AnimatedNumber({ target }) {
   const [count, setCount] = useState(0);
@@ -62,7 +63,7 @@ export default function AboutSection() {
 
           <div className="about-stats reveal">
             <div className="stat-card">
-              <AnimatedNumber target={6} />
+              <AnimatedNumber target={teamMembers.length} />
               <div className="stat-label">团队成员</div>
             </div>
             <div className="stat-card">
