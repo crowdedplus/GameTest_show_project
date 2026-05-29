@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { teamMembers } from '../data/teamData';
+import { profileData } from '../data/profileData';
 import PaperModal from './PaperModal';
 
 function MemberCard({ member }) {
@@ -81,18 +83,27 @@ function MemberCard({ member }) {
         </div>
       )}
 
-      {member.profileUrl && (
-        <a
-          href={member.profileUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="member-link"
-        >
-          个人主页
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M7 17L17 7M7 7h10v10"/>
-          </svg>
-        </a>
+      {(member.profileUrl || profileData[member.id]) && (
+        profileData[member.id] ? (
+          <Link to={`/profile/${member.id}`} className="member-link">
+            个人主页
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M7 17L17 7M7 7h10v10"/>
+            </svg>
+          </Link>
+        ) : (
+          <a
+            href={member.profileUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="member-link"
+          >
+            个人主页
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M7 17L17 7M7 7h10v10"/>
+            </svg>
+          </a>
+        )
       )}
 
       {selectedPaper && (

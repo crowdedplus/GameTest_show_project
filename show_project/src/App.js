@@ -1,45 +1,21 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
-import AboutSection from './components/AboutSection';
-import TeamSection from './components/TeamSection';
-import ProjectSection from './components/ProjectSection';
-import DemoSection from './components/DemoSection';
-import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import ProfilePage from './pages/ProfilePage';
 
 function App() {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -60px 0px' }
-    );
-
-    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <>
+    <HashRouter>
       <Navbar />
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <TeamSection />
-        <ProjectSection />
-        <DemoSection />
-        <ContactSection />
-      </main>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/profile/:id" element={<ProfilePage />} />
+      </Routes>
       <Footer />
-    </>
+    </HashRouter>
   );
 }
 
