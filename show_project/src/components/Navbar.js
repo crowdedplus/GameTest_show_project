@@ -1,21 +1,31 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation();
-  const isHome = location.pathname === '/' || location.pathname === '';
+
+  const isHome = (() => {
+    const h = window.location.hash;
+    return h === '#/' || h === '' || !h;
+  })();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const closeMenu = () => setMenuOpen(false);
 
-  const navHref = (section) => isHome ? `#${section}` : `#/${section}`;
+  const scrollTo = (section) => {
+    closeMenu();
+    const el = document.getElementById(section);
+    if (el) {
+      const y = el.getBoundingClientRect().top + window.pageYOffset - 80;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
 
   return (
     <nav className={`navbar${scrolled || !isHome ? ' scrolled' : ''}`}>
@@ -35,11 +45,11 @@ export default function Navbar() {
         </button>
 
         <ul className={`nav-links${menuOpen ? ' open' : ''}`}>
-          <li><a href={navHref('hero')} onClick={closeMenu}>首页</a></li>
-          <li><a href={navHref('about')} onClick={closeMenu}>关于</a></li>
-          <li><a href={navHref('team')} onClick={closeMenu}>团队成员</a></li>
-          <li><a href={navHref('projects')} onClick={closeMenu}>项目</a></li>
-          <li><a href={navHref('contact')} onClick={closeMenu}>联系我们</a></li>
+          <li><button className="nav-link-btn" onClick={() => scrollTo('hero')}>首页</button></li>
+          <li><button className="nav-link-btn" onClick={() => scrollTo('about')}>关于</button></li>
+          <li><button className="nav-link-btn" onClick={() => scrollTo('team')}>团队成员</button></li>
+          <li><button className="nav-link-btn" onClick={() => scrollTo('projects')}>项目</button></li>
+          <li><button className="nav-link-btn" onClick={() => scrollTo('contact')}>联系我们</button></li>
         </ul>
       </div>
     </nav>

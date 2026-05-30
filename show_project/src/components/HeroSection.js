@@ -1,5 +1,13 @@
 import React from 'react';
 
+function scrollTo(section) {
+  const el = document.getElementById(section);
+  if (el) {
+    const y = el.getBoundingClientRect().top + window.pageYOffset - 80;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+}
+
 export default function HeroSection() {
   return (
     <section className="hero" id="hero">
@@ -17,15 +25,15 @@ export default function HeroSection() {
           自动化 · 非侵入 · 智能决策
         </p>
         <div className="hero-actions">
-          <a href="#projects" className="btn btn-primary">
+          <button className="btn btn-primary" onClick={() => scrollTo('projects')}>
             查看项目
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
-          </a>
-          <a href="#team" className="btn btn-outline">
+          </button>
+          <button className="btn btn-outline" onClick={() => scrollTo('team')}>
             团队成员
-          </a>
+          </button>
         </div>
       </div>
 

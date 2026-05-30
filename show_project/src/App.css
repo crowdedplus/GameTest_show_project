@@ -131,7 +131,7 @@ body {
 }
 
 .nav-links a,
-.nav-links button {
+.nav-link-btn {
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
   font-size: 0.9rem;
@@ -146,22 +146,22 @@ body {
 }
 
 .navbar.scrolled .nav-links a,
-.navbar.scrolled .nav-links button {
+.navbar.scrolled .nav-link-btn {
   color: var(--text-medium);
 }
 
 .nav-links a:hover,
-.nav-links button:hover {
+.nav-link-btn:hover {
   color: var(--white);
 }
 
 .navbar.scrolled .nav-links a:hover,
-.navbar.scrolled .nav-links button:hover {
+.navbar.scrolled .nav-link-btn:hover {
   color: var(--primary);
 }
 
 .nav-links a::after,
-.nav-links button::after {
+.nav-link-btn::after {
   content: '';
   position: absolute;
   bottom: -2px;
@@ -174,7 +174,7 @@ body {
 }
 
 .nav-links a:hover::after,
-.nav-links button:hover::after {
+.nav-link-btn:hover::after {
   width: 100%;
 }
 
@@ -1270,7 +1270,7 @@ body {
   }
 
   .nav-links a,
-  .nav-links button {
+  .nav-link-btn {
     color: var(--text-dark) !important;
     font-size: 1rem;
   }

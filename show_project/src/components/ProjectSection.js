@@ -1,6 +1,14 @@
 import React from 'react';
 import { projectData } from '../data/teamData';
 
+function scrollTo(section) {
+  const el = document.getElementById(section);
+  if (el) {
+    const y = el.getBoundingClientRect().top + window.pageYOffset - 80;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+}
+
 const featureIcons = {
   control: (
     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -68,12 +76,12 @@ export default function ProjectSection() {
                 <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
               </svg>
             </a>
-            <a href="#demos" className="btn-project">
+            <button className="btn-project" onClick={() => scrollTo('demos')}>
               查看演示
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <polygon points="5 3 19 12 5 21 5 3"/>
               </svg>
-            </a>
+            </button>
             <a href={projectData.links.segGroup} target="_blank" rel="noopener noreferrer" className="btn-project">
               SEG 研究组
             </a>
