@@ -18,21 +18,20 @@ export default function HeroSection() {
       <div className="hero-content">
         <div className="hero-badge">NJU · SEG · HUAWEI</div>
         <h1 className="hero-title">
-          <span>非侵入式自动化移动游戏测试</span>
+          <span>南京大学软件工程研究组</span>
         </h1>
         <p className="hero-desc">
-          南京大学软件工程研究组联合华为鸿蒙团队，探索游戏自动化测试的技术无人区。
-          自动化 · 非侵入 · 智能决策
+          致力于软件测试自动化与智能化软件工程前沿研究。联合华为鸿蒙团队，探索非侵入式移动游戏自动化测试的技术无人区。
         </p>
         <div className="hero-actions">
-          <button className="btn btn-primary" onClick={() => scrollTo('projects')}>
-            查看项目
+          <button className="btn btn-primary" onClick={() => scrollTo('team')}>
+            团队成员
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </button>
-          <button className="btn btn-outline" onClick={() => scrollTo('team')}>
-            团队成员
+          <button className="btn btn-outline" onClick={() => scrollTo('projects')}>
+            查看项目
           </button>
         </div>
       </div>

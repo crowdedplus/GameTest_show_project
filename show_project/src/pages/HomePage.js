@@ -24,8 +24,8 @@ export default function HomePage() {
   return (
     <main>
       <HeroSection />
-      <AboutSection />
       <TeamSection />
+      <AboutSection />
       <ProjectSection />
       <DemoSection />
       <ContactSection />

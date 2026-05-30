@@ -46,8 +46,8 @@ export default function Navbar() {
 
         <ul className={`nav-links${menuOpen ? ' open' : ''}`}>
           <li><button className="nav-link-btn" onClick={() => scrollTo('hero')}>首页</button></li>
-          <li><button className="nav-link-btn" onClick={() => scrollTo('about')}>关于</button></li>
           <li><button className="nav-link-btn" onClick={() => scrollTo('team')}>团队成员</button></li>
+          <li><button className="nav-link-btn" onClick={() => scrollTo('about')}>关于我们</button></li>
           <li><button className="nav-link-btn" onClick={() => scrollTo('projects')}>项目</button></li>
           <li><button className="nav-link-btn" onClick={() => scrollTo('contact')}>联系我们</button></li>
         </ul>
