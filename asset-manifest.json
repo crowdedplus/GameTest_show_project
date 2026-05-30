@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/GameTest_show_project/static/css/main.c9174eda.css",
-    "main.js": "/GameTest_show_project/static/js/main.c7f1623c.js",
+    "main.js": "/GameTest_show_project/static/js/main.5441b8b8.js",
     "static/js/206.65149dea.chunk.js": "/GameTest_show_project/static/js/206.65149dea.chunk.js",
     "index.html": "/GameTest_show_project/index.html"
   },
   "entrypoints": [
     "static/css/main.c9174eda.css",
-    "static/js/main.c7f1623c.js"
+    "static/js/main.5441b8b8.js"
   ]
 }
